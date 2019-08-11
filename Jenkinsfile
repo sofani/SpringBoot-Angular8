@@ -2,7 +2,7 @@ node('master') {
   stage('import') {
     try {
     
-      git url:'https://github.com/sofani/SpringBoot-Server.git'
+      git url:'https://github.com/sofani/SpringBoot-Angular8.git'
     
       
     } catch(error) {
@@ -13,12 +13,12 @@ node('master') {
   stage('build') {
     try {
     
-      dir('SpringBoot-Server') {
+      dir('SpringBoot-Angular8/Demo_SpringBoot_JPA_CRUD') {
       
         sh 'mvn -B -SpringBoot-Server clean build package' 
        
         
-        dir ('SpringBoot-Server/Client-Angular8') {
+        dir ('SpringBoot-Angular8/Client-Angular8') {
         
 				bat 'npm install'
 				bat 'ng build'
