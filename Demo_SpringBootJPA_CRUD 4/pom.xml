@@ -6,7 +6,7 @@
 	<groupId>com.infy</groupId>
 	<artifactId>Demo_SpringBoot_JPA_CRUD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>Demo_SpringBoot_JPA_CRUD</name>
 	<description>Demo project for Spring Boot and JPA</description>
@@ -25,6 +25,11 @@
 	</properties>
 
 	<dependencies>
+	
+	    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -35,16 +40,31 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+	
+		
 		<dependency>
-			<groupId>com.github.noraui</groupId>
-			<artifactId>ojdbc7</artifactId>
-			<version>12.1.0.2</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
+		
+	
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.0.Final</version>
+        </dependency>
+	    <dependency>
+		     <groupId>mysql</groupId>
+		     <artifactId>mysql-connector-java</artifactId>
+		     <scope>runtime</scope>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

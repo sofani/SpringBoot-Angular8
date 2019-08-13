@@ -1,8 +1,8 @@
-C:\Users\nishant_raj01\Desktop\SpringProject\src\main\java\com\infy\service\CustomerServiceImpl.java
-C:\Users\nishant_raj01\Desktop\SpringProject\src\main\java\com\infy\model\Customer.java
-C:\Users\nishant_raj01\Desktop\SpringProject\src\main\java\com\infy\repository\CustomerDAO.java
-C:\Users\nishant_raj01\Desktop\SpringProject\src\main\java\com\infy\entity\CustomerEntity.java
-C:\Users\nishant_raj01\Desktop\SpringProject\src\main\java\com\infy\service\CustomerService.java
-C:\Users\nishant_raj01\Desktop\SpringProject\src\main\java\com\infy\utility\LoggingAspect.java
-C:\Users\nishant_raj01\Desktop\SpringProject\src\main\java\com\infy\MyTester.java
-C:\Users\nishant_raj01\Desktop\SpringProject\src\main\java\com\infy\repository\CustomerDAOImpl.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/dao/CustomerDAO.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/utility/LoggingAspect.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/DemoSpringBootJPACRUDApplication.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/service/CustomerServiceImpl.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/entity/CustomerEntity.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/api/CustomerAPI.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/dao/CustomerDAOImpl.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/service/CustomerService.java

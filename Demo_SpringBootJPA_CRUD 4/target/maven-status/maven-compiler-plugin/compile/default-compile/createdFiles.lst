@@ -1,8 +1,1 @@
-com\infy\repository\CustomerDAOImpl.class
-com\infy\model\Customer.class
-com\infy\MyTester.class
-com\infy\entity\CustomerEntity.class
-com\infy\service\CustomerService.class
-com\infy\repository\CustomerDAO.class
-com\infy\service\CustomerServiceImpl.class
-com\infy\utility\LoggingAspect.class
+com/infy/api/CustomerAPI.class

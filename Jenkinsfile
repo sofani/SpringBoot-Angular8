@@ -1,4 +1,5 @@
 node('master') {
+
   stage('import') {
     try {
     
@@ -13,16 +14,16 @@ node('master') {
   stage('build') {
     try {
     
-      dir('SpringBoot-Angular8/Demo_SpringBoot_JPA_CRUD') {
+      dir('SpringBoot-Angular8/Demo_SpringBoot_JPA_CRUD 4') {
       
-        sh 'mvn -B -SpringBoot-Server clean build package' 
+        sh 'mvn -B -Demo_SpringBoot_JPA_CRUD 4 clean build package' 
        
         
-        dir ('SpringBoot-Angular8/Client-Angular8') {
+        dir ('SpringBoot-Angular8/Angular8-Client') {
         
 				bat 'npm install'
 				bat 'ng build'
-			}
+		}
       }
       
     } catch(error) {
