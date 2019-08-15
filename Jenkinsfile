@@ -14,9 +14,9 @@ node('master') {
   stage('build') {
     try {
     
-      dir('SpringBoot-Angular8/Demo_SpringBoot_JPA_CRUD 4') {
+     // dir('SpringBoot-Angular8/Demo_SpringBoot_JPA_CRUD 4') {
       
-        sh 'mvn -B -Demo_SpringBoot_JPA_CRUD 4 clean build package' 
+        //sh 'mvn -B -Demo_SpringBoot_JPA_CRUD 4 clean build package' 
        
         
         dir ('SpringBoot-Angular8/Angular8-Client') {
@@ -24,7 +24,7 @@ node('master') {
 				bat 'npm install'
 				bat 'ng build'
 		}
-      }
+      //}
       
     } catch(error) {
       //slackSend message: color:'danger'
