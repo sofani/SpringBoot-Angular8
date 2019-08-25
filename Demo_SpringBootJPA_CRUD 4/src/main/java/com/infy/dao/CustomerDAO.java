@@ -12,8 +12,8 @@ public interface CustomerDAO {
 	
 	public CustomerEntity getCustomer(Integer customerId) throws Exception;
 	
-    //public List<CustomerEntity> getAllCustomerDetails()throws Exception;
+    public List<CustomerEntity> getAllCustomerDetails()throws Exception;
 	
-//	public Integer updateCustomer(Integer customerId, String emailId)throws Exception;
-//	public Integer deleteCustomer(Integer customerId)throws Exception;
+	public Integer updateCustomer(Integer customerId, String emailId)throws Exception;
+	public Integer deleteCustomer(Integer customerId)throws Exception;
 }

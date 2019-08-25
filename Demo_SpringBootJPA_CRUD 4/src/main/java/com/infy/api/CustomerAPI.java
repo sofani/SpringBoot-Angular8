@@ -63,33 +63,34 @@ public class CustomerAPI {
 	
 	//retrieve all
 	
-//	@RequestMapping(value = "/getAllCustomerDetails", method = RequestMethod.GET)
-//	public ResponseEntity<List<CustomerEntity>> getAllCustomerDetails() throws Exception {
-//		
-//		List<CustomerEntity> customerList = customerService.getAllCustomerDetails();
-//		
-//		ResponseEntity<List<CustomerEntity>> response = new ResponseEntity<List<CustomerEntity>>(customerList, HttpStatus.OK);
-//		
-//		return response;
-//	}
+	@RequestMapping(value = "/getAllCustomerDetails", method = RequestMethod.GET)
+	public ResponseEntity<List<CustomerEntity>> getAllCustomerDetails() throws Exception {
+		
+		List<CustomerEntity> customerList = customerService.getAllCustomerDetails();
+		
+		ResponseEntity<List<CustomerEntity>> response = new ResponseEntity<List<CustomerEntity>>(customerList, HttpStatus.OK);
+		
+		return response;
+	}
  
     //update
     
-//    @RequestMapping(value = "/updateCustomer/{customerId}", method = RequestMethod.PUT)
-//	public ResponseEntity<String> updateCustomer(@PathVariable Integer customerId, @RequestBody Customer customer)  throws Exception {
-//		customerService.updateCustomer(customerId,customer.getEmailId());
-//		String successMessage = "Customer updated successfully.";
-//		ResponseEntity<String> response = new ResponseEntity<String>(successMessage, HttpStatus.OK);
-//		return response;
-//	}
-//    
+    @RequestMapping(value = "/updateCustomer/{customerId}", method = RequestMethod.PUT)
+	public ResponseEntity<String> updateCustomer(@PathVariable Integer customerId, @RequestBody CustomerEntity customer)  throws Exception {
+		customerService.updateCustomer(customerId, customer.getEmailId());
+		String successMessage = "Customer updated successfully.";
+		ResponseEntity<String> response = new ResponseEntity<String>(successMessage, HttpStatus.OK);
+		return response;
+	}
+    
       //delete
-//	@RequestMapping(value = "/deleteCustomer/{customerId}", method = RequestMethod.DELETE)
-//	public ResponseEntity<String> deleteCustomer(@PathVariable Integer customerId) throws Exception  {
-//		customerService.deleteCustomer(customerId);
-//		String successMessage = "Customer deleted succssfully";
-//		ResponseEntity<String> response = new ResponseEntity<String>(successMessage, HttpStatus.OK);
-//		return response;
-	//
-//	}
+    
+	@RequestMapping(value = "/deleteCustomer/{customerId}", method = RequestMethod.DELETE)
+	public ResponseEntity<String> deleteCustomer(@PathVariable Integer customerId) throws Exception  {
+		customerService.deleteCustomer(customerId);
+		String successMessage = "Customer deleted succssfully";
+		ResponseEntity<String> response = new ResponseEntity<String>(successMessage, HttpStatus.OK);
+		return response;
+	
+	}
 }

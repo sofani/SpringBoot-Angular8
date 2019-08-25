@@ -10,7 +10,6 @@ import javax.persistence.Table;
 public class CustomerEntity {
 
 	@Id
-	
 	private Integer customerId;
 
 	private String emailId;

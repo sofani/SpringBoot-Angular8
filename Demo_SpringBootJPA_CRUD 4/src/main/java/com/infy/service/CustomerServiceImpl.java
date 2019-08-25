@@ -40,32 +40,32 @@ public class CustomerServiceImpl implements CustomerService {
 
 	}
 	
-//	public List<CustomerEntity> getAllCustomerDetails() throws Exception {
-//		
-//
-//		return customerDAO.getAllCustomerDetails();
-//		
-//	}
+	public List<CustomerEntity> getAllCustomerDetails() throws Exception {
+		
+
+		return customerDAO.getAllCustomerDetails();
+		
+	}
 	
 	
 
-//	public Integer updateCustomer(Integer customerId, String emailId)
-//			throws Exception {
-//		Customer customer = customerDAO.getCustomer(customerId);
-//
-//		if (customer == null) {
-//			throw new Exception("Service.CUSTOMER_UNAVAILABLE");
-//		}
-//		return customerDAO.updateCustomer(customerId, emailId);
-//	}
-//
-//	public Integer deleteCustomer(Integer customerId) throws Exception {
-//		Customer customer = customerDAO.getCustomer(customerId);
-//
-//		if (customer == null) {
-//			throw new Exception("Service.CUSTOMER_UNAVAILABLE");
-//		}
-//		return customerDAO.deleteCustomer(customerId);
-//	}
+	public Integer updateCustomer(Integer customerId, String emailId)
+			throws Exception {
+		CustomerEntity customer = customerDAO.getCustomer(customerId);
+
+		if (customer == null) {
+			throw new Exception("Service.CUSTOMER_UNAVAILABLE");
+		}
+		return customerDAO.updateCustomer(customerId, emailId);
+	}
+
+	public Integer deleteCustomer(Integer customerId) throws Exception {
+		CustomerEntity customer = customerDAO.getCustomer(customerId);
+
+		if (customer == null) {
+			throw new Exception("Service.CUSTOMER_UNAVAILABLE");
+		}
+		return customerDAO.deleteCustomer(customerId);
+	}
 
 }

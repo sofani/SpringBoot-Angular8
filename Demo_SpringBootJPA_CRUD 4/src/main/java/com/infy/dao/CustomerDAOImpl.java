@@ -4,7 +4,10 @@ import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -20,8 +23,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 	public Integer addCustomer(CustomerEntity customer) throws Exception {
 
 		Integer customerId=null;
-		
-	
 
 		CustomerEntity entity=new CustomerEntity();
 		entity.setCustomerId(customer.getCustomerId());
@@ -57,37 +58,36 @@ public class CustomerDAOImpl implements CustomerDAO {
 		return customer;
 	}
 	
-//	 public List<CustomerEntity> getAllCustomerDetails()throws Exception {
-//		 
-//		   List<CustomerEntity> query = entityManager.createQuery("from customer").getResultList();
-//		 
-//		   return query ; 
-//	 }
+	 public List<CustomerEntity> getAllCustomerDetails()throws Exception {
+		      
+	       return  entityManager.createQuery("from CustomerEntity", CustomerEntity.class).getResultList();
+	        	  
+	 }
 	
 	
 	
 	
 //
-//	public Integer updateCustomer(Integer customerId, String emailId) throws Exception {
-//
-//		Integer cId=null;
-//
-//		CustomerEntity customerEntity = entityManager.find(CustomerEntity.class, customerId);
-//		customerEntity.setEmailId(emailId);
-//		cId=customerEntity.getCustomerId();
-//
-//		return cId;
-//	}
-//
-//	public Integer deleteCustomer(Integer customerId) throws Exception {
-//
-//		Integer cId=null;
-//		CustomerEntity customerEntity = entityManager.find(CustomerEntity.class, customerId);
-//		entityManager.remove(customerEntity);
-//		cId=customerEntity.getCustomerId();
-//
-//
-//		return cId;
-//	}
+	public Integer updateCustomer(Integer customerId, String emailId) throws Exception {
+
+		Integer cId=null;
+
+		CustomerEntity customerEntity = entityManager.find(CustomerEntity.class, customerId);
+		customerEntity.setEmailId(emailId);
+		cId=customerEntity.getCustomerId();
+
+		return cId;
+	}
+
+	public Integer deleteCustomer(Integer customerId) throws Exception {
+
+		Integer cId=null;
+		CustomerEntity customerEntity = entityManager.find(CustomerEntity.class, customerId);
+		entityManager.remove(customerEntity);
+		cId=customerEntity.getCustomerId();
+
+
+		return cId;
+	}
 
 }
