@@ -67,7 +67,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	
 	
 	
-//
+
 	public Integer updateCustomer(Integer customerId, String emailId) throws Exception {
 
 		Integer cId=null;
