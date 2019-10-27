@@ -1,8 +1,13 @@
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/dao/ArticleDAOImpl.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/entity/Article.java
 /Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/dao/CustomerDAO.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/service/CustomerServiceImpl.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/entity/Reply.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/dao/CustomerDAOImpl.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/dao/ArticleDAO.java
 /Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/utility/LoggingAspect.java
 /Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/DemoSpringBootJPACRUDApplication.java
-/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/service/CustomerServiceImpl.java
+/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/entity/Comment.java
 /Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/entity/CustomerEntity.java
 /Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/api/CustomerAPI.java
-/Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/dao/CustomerDAOImpl.java
 /Users/sofani/SpringBoot-Angular8/Demo_SpringBootJPA_CRUD 4/src/main/java/com/infy/service/CustomerService.java

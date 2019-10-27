@@ -1,1 +1,6 @@
+com/infy/dao/ArticleDAOImpl.class
+com/infy/entity/Comment.class
+com/infy/dao/ArticleDAO.class
+com/infy/entity/Reply.class
+com/infy/entity/Article.class
 com/infy/api/CustomerAPI.class

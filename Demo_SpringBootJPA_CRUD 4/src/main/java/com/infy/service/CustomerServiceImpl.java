@@ -60,6 +60,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	public Integer deleteCustomer(Integer customerId) throws Exception {
+		
 		CustomerEntity customer = customerDAO.getCustomer(customerId);
 
 		if (customer == null) {
