@@ -6,4 +6,6 @@ com/infy/entity/Reply.class
 com/infy/service/ArticleService.class
 com/infy/entity/Article.class
 com/infy/service/ArticleServiceImpl.class
+com/infy/entity/UploadedFile.class
+com/infy/entity/FileValidator.class
 com/infy/api/CustomerAPI.class

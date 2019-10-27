@@ -1,10 +1,10 @@
 package com.infy.api;
 
-import java.io.IOException;
+
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import javax.servlet.http.HttpServletResponse;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.infy.entity.Article;
-import com.infy.entity.CustomerEntity;
-import com.infy.entity.FileValidator;
+
+
 import com.infy.service.ArticleService;
-import com.infy.service.CustomerService;
+
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -33,8 +33,7 @@ public class ArticleAPI {
 	@Autowired
 	private ArticleService articleService;
 	
-	@Autowired
-	FileValidator fileValidator;
+
 	
     @Autowired
 	Environment environment;
@@ -62,6 +61,7 @@ public class ArticleAPI {
     		OutputStream outputStream = null;
     		
     		//File file = new File("C:\\mavan-hibernate-image-mysql.gif");
+    		
             byte[] bFile = new byte[(int) file.getSize()];
             
             try {
@@ -69,7 +69,9 @@ public class ArticleAPI {
     	     //convert file into array of bytes
             	inputStream.read(bFile);
             	inputStream.close();
+            	
             } catch (Exception e) {
+            	
     	        e.printStackTrace();
             }
             
