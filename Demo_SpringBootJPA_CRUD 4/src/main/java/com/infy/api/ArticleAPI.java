@@ -4,13 +4,12 @@ package com.infy.api;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -53,9 +52,9 @@ public class ArticleAPI {
     //add
 	
 	@RequestMapping(value = "/addArticle", method = RequestMethod.POST)
-    public ResponseEntity<String> addArticle(@RequestBody Article article, @RequestParam("file") MultipartFile file) throws Exception  {
+    public ResponseEntity<String> addArticle(@ModelAttribute Article article, @RequestParam("file") MultipartFile file) throws Exception  {
 	    	
-		if(article.getId() == 0){
+	
     		//save image into database
     		InputStream inputStream = null;
     		OutputStream outputStream = null;
@@ -80,7 +79,7 @@ public class ArticleAPI {
 		
 		
 		    articleService.addArticle(article);
-		}
+		
 			
 			String successMessage = "Article added successfully";
 			
