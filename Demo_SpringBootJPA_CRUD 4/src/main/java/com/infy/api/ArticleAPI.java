@@ -11,7 +11,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,7 +52,7 @@ public class ArticleAPI {
     //add
 	
 	@RequestMapping(value = "/addArticle", method = RequestMethod.POST)
-    public ResponseEntity<String> addArticle(@RequestParam Article article, @RequestParam("file") MultipartFile file) throws Exception  {
+    public ResponseEntity<String> addArticle(@ModelAttribute Article article, @RequestParam("file") MultipartFile file) throws Exception  {
 	    	
 	
     		//save image into database
