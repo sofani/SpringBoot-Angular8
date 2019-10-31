@@ -52,7 +52,7 @@ public class ArticleAPI {
     //add
 	
 	@RequestMapping(value = "/addArticle", method = RequestMethod.POST)
-    public ResponseEntity<String> addArticle(@RequestBody Article article, @RequestParam("file") MultipartFile file) throws Exception  {
+    public ResponseEntity<String> addArticle(@RequestParam Article article, @RequestParam("file") MultipartFile file) throws Exception  {
 	    	
 	
     		//save image into database
