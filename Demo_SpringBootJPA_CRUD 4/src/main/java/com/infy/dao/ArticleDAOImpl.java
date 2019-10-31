@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 import com.infy.entity.Article;
-import com.infy.entity.CustomerEntity;
+
 
 
 @Repository(value = "articleDAO")
