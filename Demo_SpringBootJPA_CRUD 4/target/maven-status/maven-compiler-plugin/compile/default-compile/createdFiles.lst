@@ -1,6 +1,5 @@
 com/infy/dao/ArticleDAOImpl.class
 com/infy/entity/Comment.class
-com/infy/api/ArticleAPI.class
 com/infy/dao/ArticleDAO.class
 com/infy/entity/Reply.class
 com/infy/service/ArticleService.class
@@ -8,4 +7,3 @@ com/infy/entity/Article.class
 com/infy/service/ArticleServiceImpl.class
 com/infy/entity/UploadedFile.class
 com/infy/entity/FileValidator.class
-com/infy/api/CustomerAPI.class

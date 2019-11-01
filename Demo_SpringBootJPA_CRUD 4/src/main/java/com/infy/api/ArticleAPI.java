@@ -83,7 +83,7 @@ public class ArticleAPI {
 			
 			String successMessage = "Article added successfully";
 			
-			System.out.println(environment.getProperty("UserInterface.INSERT_SUCCESS") + article.getId());
+			//System.out.println(environment.getProperty("UserInterface.INSERT_SUCCESS") + article.getId());
 			
 			ResponseEntity<String> response = new ResponseEntity<String>(successMessage, HttpStatus.CREATED);
 			
