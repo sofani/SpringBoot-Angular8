@@ -54,7 +54,7 @@ public class ArticleAPI {
 	@RequestMapping(value = "/addArticle", method = RequestMethod.POST)
     public ResponseEntity<String> addArticle(@RequestParam("file") MultipartFile file) throws Exception  {
 	    	
-	        
+	        Article article = new Article();
     		//save image into database
     		InputStream inputStream = null;
     		OutputStream outputStream = null;
@@ -75,15 +75,15 @@ public class ArticleAPI {
             }
             
             
-           /// article.setImage(bFile);
+            article.setImage(bFile);
 		
 		
-		    //articleService.addArticle(article);
+		    articleService.addArticle(article);
 		
 			
 			String successMessage = "Article added successfully";
 			
-			//System.out.println(environment.getProperty("UserInterface.INSERT_SUCCESS") + article.getId());
+			System.out.println(environment.getProperty("UserInterface.INSERT_SUCCESS") + article.getId());
 			
 			ResponseEntity<String> response = new ResponseEntity<String>(successMessage, HttpStatus.CREATED);
 			
