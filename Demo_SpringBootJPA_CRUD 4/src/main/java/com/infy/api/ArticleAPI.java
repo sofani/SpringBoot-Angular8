@@ -52,30 +52,30 @@ public class ArticleAPI {
     //add
 	
 	@RequestMapping(value = "/addArticle", method = RequestMethod.POST)
-    public ResponseEntity<String> addArticle(@RequestBody Article article, @RequestParam("file") MultipartFile file) throws Exception  {
+    public ResponseEntity<String> addArticle(@RequestBody Article article) throws Exception  {
 	    	
 	
-    		//save image into database
-    		InputStream inputStream = null;
-    		OutputStream outputStream = null;
-    		
-    		//File file = new File("C:\\mavan-hibernate-image-mysql.gif");
-    		
-            byte[] bFile = new byte[(int) file.getSize()];
-            
-            try {
-            	inputStream = file.getInputStream();
-    	     //convert file into array of bytes
-            	inputStream.read(bFile);
-            	inputStream.close();
-            	
-            } catch (Exception e) {
-            	
-    	        e.printStackTrace();
-            }
-            
-            
-            article.setImage(bFile);
+//    		//save image into database
+//    		InputStream inputStream = null;
+//    		OutputStream outputStream = null;
+//    		
+//    		//File file = new File("C:\\mavan-hibernate-image-mysql.gif");
+//    		
+//            byte[] bFile = new byte[(int) file.getSize()];
+//            
+//            try {
+//            	inputStream = file.getInputStream();
+//    	     //convert file into array of bytes
+//            	inputStream.read(bFile);
+//            	inputStream.close();
+//            	
+//            } catch (Exception e) {
+//            	
+//    	        e.printStackTrace();
+//            }
+//            
+//            
+//            article.setImage(bFile);
 		
 		
 		    articleService.addArticle(article);
