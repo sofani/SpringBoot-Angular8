@@ -52,9 +52,9 @@ public class ArticleAPI {
     //add
 	
 	@RequestMapping(value = "/addArticle", method = RequestMethod.POST)
-    public ResponseEntity<String> addArticle(@RequestBody Article article, @RequestParam("file") MultipartFile file) throws Exception  {
+    public ResponseEntity<String> addArticle(@RequestParam("file") MultipartFile file) throws Exception  {
 	    	
-	
+	        
     		//save image into database
     		InputStream inputStream = null;
     		OutputStream outputStream = null;
@@ -75,10 +75,10 @@ public class ArticleAPI {
             }
             
             
-            article.setImage(bFile);
+           /// article.setImage(bFile);
 		
 		
-		    articleService.addArticle(article);
+		    //articleService.addArticle(article);
 		
 			
 			String successMessage = "Article added successfully";
