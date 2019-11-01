@@ -2,17 +2,19 @@ package com.infy.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "ARTICLE")
@@ -30,7 +32,10 @@ public class Article implements Serializable{
 	private LocalDate date;
 	private String body;
 	private String summary;
-
+    
+	
+	@Lob
+	@Column(name="IMAGE", nullable=false, columnDefinition="blob")
 	private byte[] image;
 	
 	@OneToMany(mappedBy = "article", cascade=CascadeType.REMOVE, fetch=FetchType.EAGER)	
