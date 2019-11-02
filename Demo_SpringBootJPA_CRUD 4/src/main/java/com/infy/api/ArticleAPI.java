@@ -4,6 +4,7 @@ package com.infy.api;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -52,7 +53,7 @@ public class ArticleAPI {
     //add
 	
 	@RequestMapping(value = "/addArticle", method = RequestMethod.POST)
-    public ResponseEntity<String> addArticle(Article article, @RequestParam("file") MultipartFile file) throws Exception  {
+    public ResponseEntity<String> addArticle(@RequestBody Article article, @RequestParam("file") MultipartFile file) throws Exception  {
 	    	
 	
     		//save image into database
@@ -103,9 +104,13 @@ public class ArticleAPI {
 
 	@RequestMapping(value = "/getArticleDetails/{articleId}", method = RequestMethod.GET)
 	
-	public ResponseEntity<Article> getArticleDetails(@PathVariable Integer articleId)  throws Exception  {
-		
+	public ResponseEntity<Article> getArticleDetails(HttpServletResponse responseImage, @PathVariable Integer articleId)  throws Exception  {
+		responseImage.setContentType("image/jpeg");
 		Article article = articleService.getArticle(articleId);
+		byte[] imageBytes = article.getImage();
+		responseImage.getOutputStream().write(imageBytes);
+		responseImage.getOutputStream().flush();
+		
 		
 		ResponseEntity<Article> response = new ResponseEntity<Article>(article, HttpStatus.OK);
 		
