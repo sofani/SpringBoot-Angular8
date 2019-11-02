@@ -35,7 +35,7 @@ public class Article implements Serializable{
     
 	
 	@Lob
-	@Column(name="IMAGE", nullable=false, columnDefinition="blob")
+	@Column(name="IMAGE", nullable=false, columnDefinition="LONGBLOB")
 	private byte[] image;
 	
 	@OneToMany(mappedBy = "article", cascade=CascadeType.REMOVE, fetch=FetchType.EAGER)	
